@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.emergon</groupId>
+    <artifactId>_multi-module-maven-project</artifactId>
+    <version>1.0.Final</version>
+    <packaging>pom</packaging>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <javax.ee.version>8.0</javax.ee.version>
+        <jsf.template.version>1.0.Final</jsf.template.version>
+    </properties>
+    
+    <dependencyManagement>
+        <dependencies>
+            <!-- https://mvnrepository.com/artifact/javax/javaee-api -->
+            <dependency>
+                <groupId>javax</groupId>
+                <artifactId>javaee-api</artifactId>
+                <version>${javax.ee.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.emergon</groupId>
+                <artifactId>_jsf-template</artifactId>
+                <version>${jsf.template.version}</version>
+                <type>war</type>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>
